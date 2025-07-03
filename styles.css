@@ -1,0 +1,29 @@
+*{
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 0;
+}
+
+.btnbox{
+  background-color: peachpuff;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(31, 97, 134);
+  margin: 250px 600px;
+}
+
+button{
+  padding: 15px;
+  font-size: 18px;
+}
+
+.opsbox{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
