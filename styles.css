@@ -4,26 +4,25 @@
   padding: 0;
 }
 
-.btnbox{
-  background-color: peachpuff;
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 10px;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height of screen */
+  margin: 0;
 }
 
-.container{
+.container {
   display: flex;
   flex-direction: column;
   background-color: rgb(31, 97, 134);
-  margin: 250px 600px;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 320px; /* Optional: restrict size */
+  width: 90%;        /* Responsive: take up 90% on small screens */
 }
 
 button{
   padding: 15px;
   font-size: 18px;
-}
-
-.opsbox{
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
 }
