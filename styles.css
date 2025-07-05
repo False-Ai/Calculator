@@ -15,27 +15,57 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  background-color: rgb(31, 97, 134);
+  background-color: #1e1e1e;
   padding: 20px;
   border-radius: 12px;
-  max-width: 320px; /* Optional: restrict size */
+  max-width: 400px; /* Optional: restrict size */
   width: 90%;        /* Responsive: take up 90% on small screens */
 }
 
 button{
-  padding: 15px;
+  width: 60px;
+  height: 60px;
+  border:none;
   font-size: 18px;
 }
 
 .btn{
-  border-radius: 100px;
+  border-radius: 50%;
 }
 
 .display {
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
+  background-color: white;
+  color: black;
   font-size: 24px;
   padding: 20px;
   border-radius: 12px;
   text-align: right;
+  height: 60px;
+  overflow-x: auto;
+}
+
+.btn:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.btn.operator {
+  background-color: #f5b041;
+  color: white;
+}
+
+.btn.utility {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btn.equals {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.keypad{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 10px;
 }
