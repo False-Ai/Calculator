@@ -6,6 +6,7 @@
 
 body {
   display: flex;
+  background-color: #000000;
   justify-content: center;
   align-items: center;
   height: 100vh; /* Full height of screen */
@@ -13,6 +14,7 @@ body {
 }
 
 .container {
+  position: relative;
   display: flex;
   flex-direction: column;
   background-color: #1e1e1e;
@@ -68,4 +70,25 @@ button{
   display: grid;
   grid-template-columns: repeat(4,1fr);
   gap: 10px;
+}
+
+.history-panel {
+  position: absolute;
+  top: 100px; /* adjust to position just under the display */
+  left: 0;
+  right: 0;
+  background-color: rgba(50, 50, 50, 0.95);
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  z-index: 10;
+  max-height: 200px;
+  overflow-y: auto;
+  font-size: 14px;
+  pointer-events: none;
+}
+
+
+.history-panel div {
+  pointer-events: auto;
 }
