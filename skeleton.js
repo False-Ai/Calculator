@@ -167,7 +167,7 @@ buttons.forEach(val => {
 
 function renderHistory() {
   historyPanel.innerHTML = '<h3>History</h3>' + history.map(item => `<div>${item}</div>`).join('');
-}
+} 
 
 document.addEventListener('click', (e) => {
   if (!historyPanel.contains(e.target) && e.target.textContent !== 'Hist') {

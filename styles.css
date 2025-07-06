@@ -75,7 +75,7 @@ button{
 .history-panel {
   position: absolute;
   top: 100px; /* adjust to position just under the display */
-  left: 0;
+  left: 0; 
   right: 0;
   background-color: rgba(50, 50, 50, 0.95);
   color: white;
