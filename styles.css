@@ -77,11 +77,11 @@ button{
   top: 100px; /* adjust to position just under the display */
   left: 0; 
   right: 0;
-  background-color: rgba(50, 50, 50, 0.95);
+  background-color: rgba(50, 50, 50, 1);
   color: white;
   padding: 10px;
   border-radius: 8px;
-  z-index: 10;
+  z-index: 1;
   max-height: 200px;
   overflow-y: auto;
   font-size: 14px;
@@ -90,4 +90,13 @@ button{
 
 .history-panel div {
   pointer-events: auto;
+}
+
+.history-item{
+  padding:6px;
+  cursor:pointer
+}
+
+.history-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }

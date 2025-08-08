@@ -166,8 +166,23 @@ buttons.forEach(val => {
 });
 
 function renderHistory() {
-  historyPanel.innerHTML = '<h3>History</h3>' + history.map(item => `<div>${item}</div>`).join('');
-} 
+  historyPanel.innerHTML = '<h3>History</h3>' +
+    history.map(item => {
+      const [expr, result] = item.split(' = ');
+      //data-expression attribute to store the original expression and get it back on click
+      return `<div class="history-item" data-expression="${expr}">${item}</div>`;
+    }).join('');
+
+  // Add event listeners to each item
+  document.querySelectorAll('.history-item').forEach(item => {
+    item.addEventListener('click', () => {
+      expression = item.getAttribute('data-expression');
+      display.textContent = expression;
+      historyPanel.style.display = 'none';
+    });
+  });
+}
+
 
 document.addEventListener('click', (e) => {
   if (!historyPanel.contains(e.target) && e.target.textContent !== 'Hist') {
